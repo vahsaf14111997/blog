@@ -1,0 +1,21 @@
+<%= form_for @article do |form| %>
+    <% if @article.errors.full_messages.any? %>
+        <div class="alert alert-danger" role="alert">
+        <% @article.errors.full_messages.each do |error_message| %>            
+            <ul><li> <%= error_message %></li></ul>
+        <% end %>
+        </div>
+    <% end %>
+    <div class="form-group">
+        <%= form.label :title %>
+        <%= form.text_field :title, class:'form-control' %>
+    </div>
+    <div class="form-group">
+        <%= form.label :body %>
+        <%= form.text_field :body, class:'form-control' %>
+    </div>
+    <div class="form-group">
+        <%= form.submit class:'btn btn-success mt-4' %>
+        <%= link_to 'Back', root_path, class: 'btn btn-primary mt-4' %>
+    </div>
+<% end %>
