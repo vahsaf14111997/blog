@@ -8,6 +8,6 @@ class ArticleMailer < ApplicationMailer
   def article_created
     @greeting = "Hi"
 
-    mail to: "to@example.org"
+    mail to: "vahaf1997@gmail.com"
   end
 end
