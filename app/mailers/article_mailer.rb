@@ -6,7 +6,7 @@ class ArticleMailer < ApplicationMailer
   #   en.article_mailer.article_created.subject
   #
   def article_created
-    @greeting = "Hi"
+    @greeting = "Welcome to our article"
 
     mail to: "vahaf1997@gmail.com"
   end
